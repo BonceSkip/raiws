@@ -210,23 +210,6 @@
             </exclusions>
         </dependency>
 
-        <!-- Testing -->
-        <dependency>
-            <groupId>org.mock-server.bch</groupId>
-            <artifactId>mockserver-netty</artifactId>
-            <version>3.10.3</version>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <artifactId>slf4j-api</artifactId>
-                    <groupId>org.slf4j</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>logback-classic</artifactId>
-                    <groupId>ch.qos.logback</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
 
         <dependency>
             <groupId>org.liquibase</groupId>
@@ -535,9 +518,9 @@
                 <artifactId>weblogic-maven-plugin</artifactId>
                 <version>10.3.6.0</version>
                 <configuration>
-                    <adminurl>t3://${deploy.server.ip}:${deploy.server.port}</adminurl>
-                    <user>${deploy.server.user}</user>
-                    <password>${deploy.server.pass}</password>
+                    <adminurl>t3://localhost:7001</adminurl>
+                    <user>weblogic</user>
+                    <password>welcome1</password>
                     <upload>true</upload>
                     <action>deploy</action>
                     <remote>true</remote>
